@@ -1,7 +1,34 @@
-import logo from "./logo.svg";
-import "./App.css";
+import { useRef, useEffect, useState } from "react";
+import "./App.scss";
+import "./components/Timeline/Timeline.scss";
+import "./components/TimelineContent/TimelineContent.scss";
+import "./components/TimelineHeader/TimelineHeader.scss";
 
 function App() {
+  const [offset, setOffset] = useState(0);
+
+  const lateralTextWrapperRef = useRef(null);
+  const navYearsRef = useRef(null);
+  const navYearsChildRef = useRef(null);
+
+  useEffect(() => {
+    const onScroll = () => {
+      let headFixedHeight = lateralTextWrapperRef.current.offsetHeight;
+      let navPosition = navYearsRef.current.getBoundingClientRect().top;
+      let diff = navPosition - headFixedHeight;
+      if (diff <= 0) {
+        navYearsChildRef.current.classList.add("fixed");
+      } else {
+        navYearsChildRef.current.classList.remove("fixed");
+      }
+    };
+    // clean up code
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  console.log(offset);
   return (
     <div className="App">
       <div class="cmp-modal" data-modal-id="timeline-modal">
@@ -9,7 +36,10 @@ function App() {
           <div class="common-wrapper">
             <div class="cmp-timeline__container">
               <div class="cmp-timeline__lateral-wrapper">
-                <div class="cmp-timeline__lateral-text-wrapper">
+                <div
+                  class="cmp-timeline__lateral-text-wrapper"
+                  ref={lateralTextWrapperRef}
+                >
                   <a href="#" class="cmp-timeline__lateral-back">
                     <img
                       alt="arrow back"
@@ -28,45 +58,18 @@ function App() {
               </div>
 
               <div class="cmp-timeline__content-wrapper">
-                <div class="cmp-timeline__content-rectangle"></div>
-                <div class="cmp-timeline__content-image-container">
-                  <div class="cmp-timeline__content-image-wrapper">
-                    <img
-                      src="//images.ctfassets.net/m8onsx4mm13s/54fAGu71OGGdZzJW6ebVfs/1a1d52b6bf0914e19359c63395b2f447/timeline-content-1962-img.jpg"
-                      alt="Maestro Timeline image"
-                      class="cmp-timeline__content-image-elem"
-                    />
-                  </div>
-                </div>
                 <div class="cmp-timeline__content-text-wrapper">
-                  <h1>The Maestro Jukebox Timeline</h1>
-                  <div class="cmp-timeline__content-desc-desktop">
-                    <p>
-                      <p>
-                        Maybe you've never heard of Maestro. But you've
-                        definitely <em>heard</em> Maestro. Starting with that
-                        opening riff of the Rolling Stones'
-                        &quot;Satisfaction,&quot; our pedals and effects have
-                        been used by the world's best producers and musicians to
-                        shape the sounds that defined entire decades.
-                      </p>
-                    </p>
-                  </div>
-                  <a
-                    href="#timeline-lern-more"
-                    class="cmp-timeline__content-scroll-container"
-                  >
-                    <span class="cmp-timeline__content-scroll-text">
-                      CLICK TO LEARN MORE
-                    </span>
-                    <span class="cmp-timeline__content-scroll-icon"></span>
-                  </a>
+                  <h1>Your Guitar</h1>
+                  <div class="cmp-timeline__content-desc-desktop"></div>
                 </div>
               </div>
             </div>
             <div class="cmp-timeline__data" id="timeline-lern-more">
-              <div class="cmp-timeline__data-nav-year">
-                <div class="cmp-timeline__data-nav-year--container">
+              <div class="cmp-timeline__data-nav-year" ref={navYearsRef}>
+                <div
+                  class="cmp-timeline__data-nav-year--container"
+                  ref={navYearsChildRef}
+                >
                   <a
                     href="#year-1962"
                     class="cmp-timeline__data-nav-year--item"
@@ -75,7 +78,7 @@ function App() {
                   </a>
                   <a
                     href="#year-1970"
-                    class="cmp-timeline__data-nav-year--item"
+                    class="cmp-timeline__data-nav-year--item active"
                   >
                     1970
                   </a>

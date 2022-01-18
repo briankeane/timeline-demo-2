@@ -1,0 +1,431 @@
+// Condenced
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url('/static/fonts/TradeGothicLTStd-BdCn20Obl.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-BdCn20Obl.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-BdCn20Obl.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url('/static/fonts/TradeGothicLTStd-BdCn20.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-BdCn20.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-BdCn20.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+// Bold nro 2
+@font-face {
+    font-family: 'Trade Gothic LT Std Bd2';
+    src: url('/static/fonts/TradeGothicLTStd-Bd2.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-Bd2.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-Bd2.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal; 
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trade Gothic LT Std Bd2';
+    src: url('/static/fonts/TradeGothicLTStd-Bd2Obl.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-Bd2Obl.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-Bd2Obl.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+// Condenced 18
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url('/static/fonts/TradeGothicLTStd-Cn18.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-Cn18.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-Cn18.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal; 
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url('/static/fonts/TradeGothicLTStd-Cn18Obl.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-Cn18Obl.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-Cn18Obl.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+
+// Standards
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url('/static/fonts/TradeGothicLTStd-Obl.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-Obl.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-Obl.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url('/static/fonts/TradeGothicLTStd.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+// Lights
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url('/static/fonts/TradeGothicLTStd-Light.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-Light.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-Light.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Trade Gothic LT Std';
+    src: url('/static/fonts/TradeGothicLTStd-LightObl.woff2') format('woff2'),
+        url('/static/fonts/TradeGothicLTStd-LightObl.woff') format('woff'),
+        url('/static/fonts/TradeGothicLTStd-LightObl.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akrobat';
+    src: url('/static/fonts/Akrobat-Bold.woff2') format('woff2'),
+        url('/static/fonts/Akrobat-Bold.woff') format('woff'),
+        url('/static/fonts/Akrobat-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akrobat';
+    src: url('/static/fonts/Akrobat-Regular.woff2') format('woff2'),
+        url('/static/fonts/Akrobat-Regular.woff') format('woff'),
+        url('/static/fonts/Akrobat-Regular.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akrobat';
+    src: url('/static/fonts/Akrobat-SemiBold.woff2') format('woff2'),
+        url('/static/fonts/Akrobat-SemiBold.woff') format('woff'),
+        url('/static/fonts/Akrobat-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Akrobat';
+    src: url('/static/fonts/Akrobat-ExtraBold.woff2') format('woff2'),
+        url('/static/fonts/Akrobat-ExtraBold.woff') format('woff'),
+        url('/static/fonts/Akrobat-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic Inline';
+    src: url('/static/fonts/CitrusGothicInline-Italic.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothicInline-Italic.woff') format('woff'),
+        url('/static/fonts/CitrusGothicInline-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic Inline';
+    src: url('/static/fonts/CitrusGothicInline-Regular.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothicInline-Regular.woff') format('woff'),
+        url('/static/fonts/CitrusGothicInline-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic';
+    src: url('/static/fonts/CitrusGothic-Italic.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothic-Italic.woff') format('woff'),
+        url('/static/fonts/CitrusGothic-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic';
+    src: url('/static/fonts/CitrusGothic-Regular.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothic-Regular.woff') format('woff'),
+        url('/static/fonts/CitrusGothic-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic Rough';
+    src: url('/static/fonts/CitrusGothicRough-Regular.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothicRough-Regular.woff') format('woff'),
+        url('/static/fonts/CitrusGothicRough-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic Rough';
+    src: url('/static/fonts/CitrusGothicRough-Italic.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothicRough-Italic.woff') format('woff'),
+        url('/static/fonts/CitrusGothicRough-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic Shadow';
+    src: url('/static/fonts/CitrusGothicShadow-Italic.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothicShadow-Italic.woff') format('woff'),
+        url('/static/fonts/CitrusGothicShadow-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic Solid';
+    src: url('/static/fonts/CitrusGothicSolid-Italic.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothicSolid-Italic.woff') format('woff'),
+        url('/static/fonts/CitrusGothicSolid-Italic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic Solid';
+    src: url('/static/fonts/CitrusGothicSolid-Regular.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothicSolid-Regular.woff') format('woff'),
+        url('/static/fonts/CitrusGothicSolid-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Citrus Gothic Shadow';
+    src: url('/static/fonts/CitrusGothicShadow-Regular.woff2') format('woff2'),
+        url('/static/fonts/CitrusGothicShadow-Regular.woff') format('woff'),
+        url('/static/fonts/CitrusGothicShadow-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-BlackItalic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-BlackItalic.woff') format('woff'),
+        url('/static/fonts/Raleway-BlackItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-Bold.woff2') format('woff2'),
+        url('/static/fonts/Raleway-Bold.woff') format('woff'),
+        url('/static/fonts/Raleway-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-Black.woff2') format('woff2'),
+        url('/static/fonts/Raleway-Black.woff') format('woff'),
+        url('/static/fonts/Raleway-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-ExtraBold.woff2') format('woff2'),
+        url('/static/fonts/Raleway-ExtraBold.woff') format('woff'),
+        url('/static/fonts/Raleway-ExtraBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-ExtraBoldItalic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-ExtraBoldItalic.woff') format('woff'),
+        url('/static/fonts/Raleway-ExtraBoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-BoldItalic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-BoldItalic.woff') format('woff'),
+        url('/static/fonts/Raleway-BoldItalic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-ExtraLight.woff2') format('woff2'),
+        url('/static/fonts/Raleway-ExtraLight.woff') format('woff'),
+        url('/static/fonts/Raleway-ExtraLight.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-ExtraLightItalic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-ExtraLightItalic.woff') format('woff'),
+        url('/static/fonts/Raleway-ExtraLightItalic.ttf') format('truetype');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-Italic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-Italic.woff') format('woff'),
+        url('/static/fonts/Raleway-Italic.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-LightItalic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-LightItalic.woff') format('woff'),
+        url('/static/fonts/Raleway-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-Medium.woff2') format('woff2'),
+        url('/static/fonts/Raleway-Medium.woff') format('woff'),
+        url('/static/fonts/Raleway-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-Light.woff2') format('woff2'),
+        url('/static/fonts/Raleway-Light.woff') format('woff'),
+        url('/static/fonts/Raleway-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-MediumItalic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-MediumItalic.woff') format('woff'),
+        url('/static/fonts/Raleway-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-Regular.woff2') format('woff2'),
+        url('/static/fonts/Raleway-Regular.woff') format('woff'),
+        url('/static/fonts/Raleway-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-SemiBoldItalic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-SemiBoldItalic.woff') format('woff'),
+        url('/static/fonts/Raleway-SemiBoldItalic.ttf') format('truetype');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-Thin.woff2') format('woff2'),
+        url('/static/fonts/Raleway-Thin.woff') format('woff'),
+        url('/static/fonts/Raleway-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-SemiBold.woff2') format('woff2'),
+        url('/static/fonts/Raleway-SemiBold.woff') format('woff'),
+        url('/static/fonts/Raleway-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('/static/fonts/Raleway-ThinItalic.woff2') format('woff2'),
+        url('/static/fonts/Raleway-ThinItalic.woff') format('woff'),
+        url('/static/fonts/Raleway-ThinItalic.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
