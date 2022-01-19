@@ -42,7 +42,23 @@ function App() {
     }
   };
 
-  const determineAndSetActiveComponent = () => {};
+  const determineAndSetActiveComponent = () => {
+    var bottomToTopOrder = [
+      ActiveDates.FOUR_WEEKS_FROM_NOW,
+      ActiveDates.THREE_WEEKS_FROM_NOW,
+      ActiveDates.TWO_WEEKS_FROM_NOW,
+      ActiveDates.ONE_WEEK_FROM_NOW,
+      ActiveDates.TODAY,
+      ActiveDates.ONE_WEEK_AGO,
+      ActiveDates.TWO_WEEKS_AGO,
+    ];
+    for (let activeDate of bottomToTopOrder) {
+      if (activeDate.current.getBoundingClientRect().top < 10) {
+        setActiveDate(activeDate);
+        return;
+      }
+    }
+  };
 
   const onScroll = () => {
     determineAndSetTimelineState();
