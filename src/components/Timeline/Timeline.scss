@@ -435,7 +435,7 @@
       @include respond-to("medium-landscape") {
         top: 140px;
         width: auto;
-        padding: 0px 0px 0px 50px;
+        padding: 0px 0px 0px 15px;
       }
       @include respond-to("large") {
         left: 80px;
