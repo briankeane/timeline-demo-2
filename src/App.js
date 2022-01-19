@@ -3,6 +3,7 @@ import "./App.scss";
 import "./components/Timeline/Timeline.scss";
 import "./components/TimelineContent/TimelineContent.scss";
 import "./components/TimelineHeader/TimelineHeader.scss";
+import Specs from "./components/Specs/Specs";
 
 function App() {
   const [offset, setOffset] = useState(0);
@@ -60,10 +61,12 @@ function App() {
               <div class="cmp-timeline__content-wrapper">
                 <div class="cmp-timeline__content-text-wrapper">
                   <h1>Your Guitar</h1>
+
                   <div class="cmp-timeline__content-desc-desktop"></div>
                 </div>
               </div>
             </div>
+
             <div class="cmp-timeline__data" id="timeline-lern-more">
               <div class="cmp-timeline__data-nav-year" ref={navYearsRef}>
                 <div
@@ -115,6 +118,50 @@ function App() {
                 </div>
               </div>
               <div class="cmp-timeline__data-content-year">
+                <div class="cmp cmp-timeline-content">
+                  <div
+                    class="cmp-timeline-content__year-wrapper"
+                    id="year-1962"
+                  >
+                    <p class="cmp-timeline-content__year-title"></p>
+                    <div class="cmp-timeline-content__data-desc-wrapper">
+                      <div class="cmp-timeline-content__wrapper ">
+                        <div class="cmp-timeline-content__top-wrapper">
+                          <h1>
+                            <Specs />
+                          </h1>
+                          <div class="cmp-timeline-content__body-copy-wrapper">
+                            <p>
+                              The wood to build your guitar has arrived at the
+                              factory. We've carefully checked it's moisture
+                              content to make sure it's between 8% and 10%.\n\n
+                            </p>
+                            <p>
+                              Starting with the raw mahogany lumber, we've
+                              carefully cut it into strips and glued the strips
+                              together to create the body.
+                            </p>
+                            <p>
+                              Finally, we've bookmatched the maple top and glue
+                              it to the mahogany body.
+                            </p>
+                            <p>
+                              <iframe
+                                width="100%"
+                                height="600"
+                                src="https://www.youtube.com/embed/npOOEWaTadA?start=15"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen
+                              ></iframe>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="cmp cmp-timeline-content">
                   <div
                     class="cmp-timeline-content__year-wrapper"
