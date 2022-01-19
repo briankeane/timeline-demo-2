@@ -1,0 +1,130 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/breakpoints.scss";
+
+.cmp-timeline-content {
+  &:last-child {
+    .cmp-timeline-content__data-desc-wrapper {
+      border-bottom: 0px;
+    }
+  }
+
+  .cmp-timeline-content__year-wrapper {
+    border-bottom: 1px solid rgba(121, 121, 121, 0.18);
+    margin: 0px 20px 10px 20px;
+    @include respond-to("medium") {
+      margin: 20px;
+    }
+  }
+
+  .cmp-timeline-content__year-title {
+    position: relative;
+    color: #000000;
+    margin: 0;
+    font-family: "Trade Gothic LT Std", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: -0.4px;
+    line-height: 38px;
+    @include respond-to("medium") {
+      position: absolute;
+      left: 20px;
+      margin-top: 20px;
+    }
+  }
+
+  .cmp-timeline-content__wrapper-with-img {
+    @include respond-to("medium") {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .cmp-timeline-content__body-copy-wrapper {
+    margin-left: 0px;
+    margin-right: 0px;
+    @include respond-to("medium") {
+      margin-left: 50px;
+      margin-right: 50px;
+    }
+    iframe {
+      margin: 20px 0;
+    }
+    video {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+
+  .cmp-timeline-content__year-img-wrapper {
+    box-sizing: border-box;
+    width: 100%;
+  }
+
+  .cmp-timeline-content__year-img-desc {
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 20px;
+    @include respond-to("medium-landscape") {
+      width: 70%;
+    }
+  }
+  //video inside the rich text
+  .cmp-timeline-content__body-copy-video {
+    position: relative;
+    video {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+  .cmp-timeline-content__body-copy-video-play-button {
+    width: 48px;
+    height: 48px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    border-radius: 100%;
+    z-index: 1;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      border-top: 5px solid #fff;
+      border-bottom: 5px solid #fff;
+      border-left: 9px solid #000;
+      box-shadow: 0 0 0 9999px #fff;
+      z-index: -1;
+      border-top: 10px solid #fff;
+      border-bottom: 10px solid #fff;
+      border-left: 17px solid #000;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  //video at the bottom of the text
+  .cmp-timeline__content-video-body-wrapper {
+    margin-bottom: 20px;
+  }
+  .cmp-timeline__content-video-body-container {
+    position: relative;
+    video {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  }
+}

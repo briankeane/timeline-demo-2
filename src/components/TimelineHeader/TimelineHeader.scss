@@ -1,0 +1,252 @@
+@import "../../scss/mixins.scss";
+@import "../../scss/breakpoints.scss";
+
+.cmp-timeline-header {
+  background-color: #e03015;
+
+  .cmp-menu-item__label {
+    display: inline-block;
+    text-indent: -99999px;
+    position: absolute;
+  }
+
+  .cmp-timeline__background-img {
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: 75% 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include respond-to("medium-landscape") {
+      background-position: center;
+    }
+  }
+
+  .cmp-timeline-header__container {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    @include respond-to("medium-landscape") {
+      flex-direction: column;
+    }
+    .cmp-timeline-header__text-wrapper {
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      align-items: center;
+      height: 100vh;
+      background-color: #e03015;
+      @include respond-to("small") {
+        width: 100%;
+      }
+      @include respond-to("medium-landscape") {
+        background-color: transparent;
+      }
+    }
+  }
+
+  h1 {
+    color: #fff;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    font-weight: bold;
+    font-size: 32px;
+    letter-spacing: 0;
+    line-height: 34px;
+    width: 80%;
+    margin-top: 0%;
+    @include respond-to("medium-landscape") {
+      font-size: 70px;
+      letter-spacing: -1.75px;
+      line-height: 70px;
+      margin-top: 15%;
+    }
+  }
+
+  .cmp-timeline-header__subtitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    @include respond-to("small") {
+      width: 80%;
+    }
+    @include respond-to("medium") {
+      width: 45%;
+    }
+    @include respond-to("medium-landscape") {
+      flex-direction: row;
+      width: 80%;
+      margin: 20px;
+    }
+    p,
+    span {
+      color: #fff;
+      margin: 5px;
+    }
+    span {
+      font-family: "Trade Gothic LT Std", sans-serif;
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: 0;
+      text-align: center;
+      @include respond-to("medium-landscape") {
+        font-size: 26px;
+        line-height: 24px;
+        margin-right: 15px;
+        font-weight: 300;
+      }
+    }
+    .cmp-timeline-header__descr-wrapper {
+      @include respond-to("medium-landscape") {
+        width: 50%;
+      }
+      p {
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 0;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+        @include respond-to("medium-landscape") {
+          font-size: 14px;
+          line-height: 20px;
+          margin-bottom: auto;
+          font-weight: normal;
+          text-align: left;
+        }
+      }
+    }
+  }
+
+  .cmp-button__arrow-right {
+    margin: 10px;
+    width: 80%;
+    @include respond-to("medium") {
+      width: 50%;
+    }
+    @include respond-to("medium-landscape") {
+      width: 183px;
+    }
+  }
+
+  .cmp-timeline__header-img-wrapper-mobile::after {
+    content: "";
+    position: absolute;
+    background: linear-gradient(
+      0deg,
+      rgba(224, 48, 21, 1) 0%,
+      rgba(224, 48, 21, 1) 35%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+    @include respond-to("medium-landscape") {
+      display: none;
+    }
+  }
+
+  .cmp-timeline__header-img-wrapper-mobile {
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    @include respond-to("medium-landscape") {
+      position: inherit;
+      display: none;
+    }
+    .cmp-timeline__header-img-mobile {
+      width: 100%;
+      display: block;
+      bottom: 0;
+      @include respond-to("medium-landscape") {
+        display: none;
+      }
+    }
+  }
+
+  .cmp-timeline__header-img-wrapper-desktop {
+    margin-top: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: none;
+    @include respond-to("medium-landscape") {
+      display: flex;
+      position: inherit;
+    }
+    .cmp-timeline__header-img-desktop {
+      display: none;
+      @include respond-to("medium-landscape") {
+        display: block;
+        width: 55%;
+        position: absolute;
+        bottom: 0;
+      }
+      @include respond-to("medium-landscape-max") {
+        width: 100%;
+      }
+    }
+  }
+
+  .common-wrapper {
+    .cmp-timeline__follow-us-wrapper {
+      display: flex;
+      flex-direction: row;
+      position: absolute;
+      bottom: 45px;
+      border-top: 1px solid black;
+      width: 80%;
+      align-items: center;
+      justify-content: center;
+      padding-top: 25px;
+      background-color: #e03015;
+      @include respond-to("medium") {
+        width: 50%;
+      }
+      @include respond-to("medium-landscape") {
+        background-color: transparent;
+        flex-direction: column;
+        align-items: flex-start;
+        bottom: 30;
+        right: 30px;
+        border: none;
+        width: max-content;
+      }
+      .cmp-timeline__follow-us-title {
+        font-family: "Raleway", sans-serif;
+        letter-spacing: 0;
+        color: #fff;
+        font-size: 12px;
+        font-weight: 800;
+        letter-spacing: 0;
+        line-height: 20px;
+        margin: 0 15px 0 0;
+        @include respond-to("medium-landscape") {
+          margin-left: 5px;
+          margin-bottom: 5px;
+        }
+      }
+      .cmp-timeline__follow-us-items {
+        display: flex;
+        flex-direction: row;
+        div {
+          margin-left: 5px;
+          img {
+            width: 30px;
+            height: 30px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
