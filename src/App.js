@@ -242,7 +242,7 @@ function App() {
                     id="year-1962"
                   >
                     <p class="cmp-timeline-content__year-title">
-                      11:24am, Jan 10, 2022
+                      11:24am, Jan 10, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -289,7 +289,7 @@ function App() {
                     ref={ActiveDates.ONE_WEEK_AGO}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      4:25pm , Jan 11, 2022
+                      4:25pm , Jan 11, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -339,7 +339,7 @@ function App() {
                     ref={ActiveDates.TODAY}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -389,7 +389,7 @@ function App() {
                     ref={ActiveDates.ONE_WEEK_FROM_NOW}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -439,7 +439,7 @@ function App() {
                     ref={ActiveDates.TWO_WEEKS_FROM_NOW}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -489,7 +489,7 @@ function App() {
                     ref={ActiveDates.THREE_WEEKS_FROM_NOW}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -539,7 +539,7 @@ function App() {
                     ref={ActiveDates.FOUR_WEEKS_FROM_NOW}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
