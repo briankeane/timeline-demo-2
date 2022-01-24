@@ -5,34 +5,75 @@ import "./components/TimelineContent/TimelineContent.scss";
 import "./components/TimelineHeader/TimelineHeader.scss";
 import Specs from "./components/Specs/Specs";
 
+const TimelineState = {
+  FIXED: "FIXED",
+  FLOATING: "FLOATING",
+};
+
 function App() {
-  const [offset, setOffset] = useState(0);
+  const ActiveDates = {
+    TWO_WEEKS_AGO: useRef(null),
+    ONE_WEEK_AGO: useRef(null),
+    TODAY: useRef(null),
+    ONE_WEEK_FROM_NOW: useRef(null),
+    TWO_WEEKS_FROM_NOW: useRef(null),
+    THREE_WEEKS_FROM_NOW: useRef(null),
+    FOUR_WEEKS_FROM_NOW: useRef(null),
+  };
+
+  const [activeDate, setActiveDate] = useState(null);
 
   const lateralTextWrapperRef = useRef(null);
   const navYearsRef = useRef(null);
   const navYearsChildRef = useRef(null);
 
-  useEffect(() => {
-    const onScroll = () => {
-      let headFixedHeight = lateralTextWrapperRef.current.offsetHeight;
-      let navPosition = navYearsRef.current.getBoundingClientRect().top;
-      let diff = navPosition - headFixedHeight;
-      if (diff <= 0) {
-        navYearsChildRef.current.classList.add("fixed");
-      } else {
-        navYearsChildRef.current.classList.remove("fixed");
+  const twoWeeksAgoContentRef = useRef(null);
+
+  const [timelineState, setTimelineState] = useState();
+
+  const determineAndSetTimelineState = () => {
+    let headFixedHeight = lateralTextWrapperRef.current.offsetHeight;
+    let navPosition = navYearsRef.current.getBoundingClientRect().top;
+    let diff = navPosition - headFixedHeight;
+    if (diff <= 0 && timelineState !== TimelineState.FIXED) {
+      setTimelineState(TimelineState.FIXED);
+    } else if (diff > 0 && timelineState !== TimelineState.FLOATING) {
+      setTimelineState(TimelineState.FLOATING);
+    }
+  };
+
+  const determineAndSetActiveComponent = () => {
+    var bottomToTopOrder = [
+      ActiveDates.FOUR_WEEKS_FROM_NOW,
+      ActiveDates.THREE_WEEKS_FROM_NOW,
+      ActiveDates.TWO_WEEKS_FROM_NOW,
+      ActiveDates.ONE_WEEK_FROM_NOW,
+      ActiveDates.TODAY,
+      ActiveDates.ONE_WEEK_AGO,
+      ActiveDates.TWO_WEEKS_AGO,
+    ];
+    for (let activeDate of bottomToTopOrder) {
+      if (activeDate.current.getBoundingClientRect().top < 10) {
+        setActiveDate(activeDate);
+        return;
       }
-    };
-    // clean up code
+    }
+  };
+
+  const onScroll = () => {
+    determineAndSetTimelineState();
+    determineAndSetActiveComponent();
+  };
+
+  useEffect(() => {
     window.removeEventListener("scroll", onScroll);
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  console.log(offset);
   return (
     <div className="App">
-      <div class="cmp-modal" data-modal-id="timeline-modal">
+      <div>
         <div class="cmp cmp-timeline">
           <div class="common-wrapper">
             <div class="cmp-timeline__container">
@@ -70,105 +111,138 @@ function App() {
             <div class="cmp-timeline__data" id="timeline-lern-more">
               <div class="cmp-timeline__data-nav-year" ref={navYearsRef}>
                 <div
-                  class="cmp-timeline__data-nav-year--container"
+                  class={
+                    "cmp-timeline__data-nav-year--container" +
+                    (timelineState === TimelineState.FIXED ? " fixed" : "")
+                  }
                   ref={navYearsChildRef}
                 >
                   <a
-                    href="#year-1962"
-                    class="cmp-timeline__data-nav-year--item"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      ActiveDates.TWO_WEEKS_AGO.current.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
+                    href="#"
+                    class={
+                      "cmp-timeline__data-nav-year--item" +
+                      (activeDate === ActiveDates.TWO_WEEKS_AGO
+                        ? " active"
+                        : "")
+                    }
                   >
                     2 Weeks Ago
                   </a>
                   <a
-                    href="#year-1970"
-                    class="cmp-timeline__data-nav-year--item active"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      ActiveDates.ONE_WEEK_AGO.current.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
+                    href="#"
+                    class={
+                      "cmp-timeline__data-nav-year--item" +
+                      (activeDate === ActiveDates.ONE_WEEK_AGO ? " active" : "")
+                    }
                   >
                     1 Week Ago
                   </a>
                   <a
-                    href="#year-1986"
-                    class="cmp-timeline__data-nav-year--item"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      ActiveDates.TODAY.current.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
+                    href=""
+                    class={
+                      "cmp-timeline__data-nav-year--item" +
+                      (activeDate === ActiveDates.TODAY ? " active" : "")
+                    }
                   >
                     Today
                   </a>
                   <a
-                    href="#year-1996"
-                    class="cmp-timeline__data-nav-year--item"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      ActiveDates.ONE_WEEK_FROM_NOW.current.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
+                    class={
+                      "cmp-timeline__data-nav-year--item" +
+                      (activeDate === ActiveDates.ONE_WEEK_FROM_NOW
+                        ? " active"
+                        : "")
+                    }
                   >
                     Approx 1 Week
                   </a>
                   <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      ActiveDates.TWO_WEEKS_FROM_NOW.current.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
                     href="#year-2003"
-                    class="cmp-timeline__data-nav-year--item"
+                    class={
+                      "cmp-timeline__data-nav-year--item" +
+                      (activeDate === ActiveDates.TWO_WEEKS_FROM_NOW
+                        ? " active"
+                        : "")
+                    }
                   >
                     Approx 2 Weeks
                   </a>
                   <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      ActiveDates.THREE_WEEKS_FROM_NOW.current.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
                     href="#year-2016"
-                    class="cmp-timeline__data-nav-year--item"
+                    class={
+                      "cmp-timeline__data-nav-year--item" +
+                      (activeDate === ActiveDates.THREE_WEEKS_FROM_NOW
+                        ? " active"
+                        : "")
+                    }
                   >
                     Approx 3 Weeks
                   </a>
                   <a
+                    onClick={(e) => {
+                      e.preventDefault();
+                      ActiveDates.FOUR_WEEKS_FROM_NOW.current.scrollIntoView({
+                        behavior: "smooth",
+                      });
+                    }}
                     href="#year-2022"
-                    class="cmp-timeline__data-nav-year--item"
+                    class={
+                      "cmp-timeline__data-nav-year--item" +
+                      (activeDate === ActiveDates.FOUR_WEEKS_FROM_NOW
+                        ? " active"
+                        : "")
+                    }
                   >
                     Approx 4 Weeks
                   </a>
                 </div>
               </div>
+
               <div class="cmp-timeline__data-content-year">
                 <div class="cmp cmp-timeline-content">
                   <div
                     class="cmp-timeline-content__year-wrapper"
-                    id="year-1962"
-                  >
-                    <p class="cmp-timeline-content__year-title"></p>
-                    <div class="cmp-timeline-content__data-desc-wrapper">
-                      <div class="cmp-timeline-content__wrapper ">
-                        <div class="cmp-timeline-content__top-wrapper">
-                          <h1>
-                            <Specs />
-                          </h1>
-                          <div class="cmp-timeline-content__body-copy-wrapper">
-                            <p>
-                              The wood to build your guitar has arrived at the
-                              factory. We've carefully checked it's moisture
-                              content to make sure it's between 8% and 10%.\n\n
-                            </p>
-                            <p>
-                              Starting with the raw mahogany lumber, we've
-                              carefully cut it into strips and glued the strips
-                              together to create the body.
-                            </p>
-                            <p>
-                              Finally, we've bookmatched the maple top and glue
-                              it to the mahogany body.
-                            </p>
-                            <p>
-                              <iframe
-                                width="100%"
-                                height="600"
-                                src="https://www.youtube.com/embed/npOOEWaTadA?start=15"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                              ></iframe>
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="cmp cmp-timeline-content">
-                  <div
-                    class="cmp-timeline-content__year-wrapper"
+                    ref={ActiveDates.TWO_WEEKS_AGO}
                     id="year-1962"
                   >
                     <p class="cmp-timeline-content__year-title">
-                      11:24am, Jan 10, 2022
+                      11:24am, Jan 10, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -212,9 +286,10 @@ function App() {
                   <div
                     class="cmp-timeline-content__year-wrapper"
                     id="year-1965"
+                    ref={ActiveDates.ONE_WEEK_AGO}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      4:25pm , Jan 11, 2022
+                      4:25pm , Jan 11, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -261,9 +336,10 @@ function App() {
                   <div
                     class="cmp-timeline-content__year-wrapper"
                     id="year-1967"
+                    ref={ActiveDates.TODAY}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -310,9 +386,10 @@ function App() {
                   <div
                     class="cmp-timeline-content__year-wrapper"
                     id="year-1967"
+                    ref={ActiveDates.ONE_WEEK_FROM_NOW}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -359,9 +436,10 @@ function App() {
                   <div
                     class="cmp-timeline-content__year-wrapper"
                     id="year-1967"
+                    ref={ActiveDates.TWO_WEEKS_FROM_NOW}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -408,9 +486,10 @@ function App() {
                   <div
                     class="cmp-timeline-content__year-wrapper"
                     id="year-1967"
+                    ref={ActiveDates.THREE_WEEKS_FROM_NOW}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
@@ -457,9 +536,10 @@ function App() {
                   <div
                     class="cmp-timeline-content__year-wrapper"
                     id="year-1967"
+                    ref={ActiveDates.FOUR_WEEKS_FROM_NOW}
                   >
                     <p class="cmp-timeline-content__year-title">
-                      3:23pm , Jan 14, 2022
+                      3:23pm , Jan 14, 2022 - Nashville, TN
                     </p>
                     <div class="cmp-timeline-content__data-desc-wrapper">
                       <div class="cmp-timeline-content__wrapper ">
