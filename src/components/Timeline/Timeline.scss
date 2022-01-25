@@ -391,15 +391,21 @@
 			margin: 50px 15px;
 			color: #ffffff;
 			font-family: "Trade Gothic LT Std", sans-serif;
-			font-size: 1.125em;
+			font-size: 0.75em;
 			font-weight: 300;
 			letter-spacing: -0.5px;
 			line-height: 24px;
+			@include respond-to("medium") {
+				font-size: 1.125em;
+			}
 		}
 		a:hover,
 		a.active {
 			font-weight: bold;
-			font-size: 1.25em;
+			font-size: 0.76em;
+			@include respond-to("medium") {
+				font-size: 1.25em;
+			}
 		}
 	}
 
