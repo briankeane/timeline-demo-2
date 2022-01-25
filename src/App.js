@@ -235,6 +235,13 @@ function App() {
               </div>
 
               <div class="cmp-timeline__data-content-year">
+                <div class="cmp-timeline__data-content">
+                  <div class="cmp-timeline-content__wrapper ">
+                    <Specs />
+                  </div>
+                </div>
+              </div>
+              <div class="cmp-timeline__data-content-year">
                 <div class="cmp cmp-timeline-content">
                   <div
                     class="cmp-timeline-content__year-wrapper"
