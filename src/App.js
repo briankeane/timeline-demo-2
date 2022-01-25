@@ -101,10 +101,14 @@ function App() {
 
               <div class="cmp-timeline__content-wrapper">
                 <div class="cmp-timeline__content-text-wrapper">
-                  <h1>Your Guitar</h1>
+                  <div class="img-container">
+                    <img src="images/guitar-background.png" width={"100%"} style={{maxHeight: "250px"}}/>
+                    <h1 class="centered-text">Your Guitar</h1>
+                  </div>
 
                   <div class="cmp-timeline__content-desc-desktop"></div>
                 </div>
+                <Specs />
               </div>
             </div>
 
@@ -235,13 +239,9 @@ function App() {
               </div>
 
               <div class="cmp-timeline__data-content-year">
-                <div class="cmp-timeline__data-content">
-                  <div class="cmp-timeline-content__wrapper ">
-                    <Specs />
-                  </div>
+                <div class="gibson-card py-4">
+                  <div class="gibson-diamond"></div>
                 </div>
-              </div>
-              <div class="cmp-timeline__data-content-year">
                 <div class="cmp cmp-timeline-content">
                   <div
                     class="cmp-timeline-content__year-wrapper"
