@@ -102,7 +102,12 @@ function App() {
               <div class="cmp-timeline__content-wrapper">
                 <div class="cmp-timeline__content-text-wrapper">
                   <div class="img-container">
-                    <img src="images/guitar-background.png" width={"100%"} style={{maxHeight: "250px"}}/>
+                    <img
+                      class="header-background-image"
+                      src="images/guitar-background.png"
+                      width={"100%"}
+                      style={{ maxHeight: "250px" }}
+                    />
                     <h1 class="centered-text">Your Guitar</h1>
                   </div>
 

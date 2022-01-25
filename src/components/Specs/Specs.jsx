@@ -6,7 +6,7 @@ const Specs = () => {
 			<div class="gibson-card py-4">
 				<div class="gibson-diamond"></div>
 			</div>
-			<h3 class="text-left">Your Specifications</h3>
+			<h3 class="text-left">Specifications</h3>
 			<div class="row">
 				<div class="col-12 col-sm-6 col-md-3 text-center"></div>
 				<div class="col-12 col-sm-6 col-md-9">
