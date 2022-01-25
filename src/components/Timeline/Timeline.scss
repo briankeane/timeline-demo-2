@@ -413,6 +413,7 @@
 			top: 140px;
 			padding-top: 10px;
 			position: static;
+			min-width: 150px;
 		}
 		@media (max-width: 1023px) {
 			display: flex;
@@ -443,9 +444,9 @@
 			left: 0;
 			@include respond-to("medium-landscape") {
 				left: initial;
-				top: 140px;
+				top: 200px;
 				width: auto;
-        margin-left: 10%;
+				margin-left: 10%;
 			}
 		}
 		a {
