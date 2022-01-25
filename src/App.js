@@ -92,8 +92,8 @@ function App() {
                   <div class="cmp-timeline__logo-wrapper">
                     <img
                       class="cmp-timeline__logo"
-                      alt="Maestro Logo"
-                      src="//images.ctfassets.net/m8onsx4mm13s/1Hg7UwqsduBXi1TY1xrfjo/1c796493be53537d142a59f5f983aeb7/Maestro.svg"
+                      alt="Gibson Logo"
+                      src="//images.ctfassets.net/m8onsx4mm13s/72p8qgeqA4UK7FD2MwyA19/cbc4a71ff92b788b791a53fa683dc6f4/gibson__1_.svg"
                     />
                   </div>
                 </div>
@@ -178,7 +178,7 @@ function App() {
                         : "")
                     }
                   >
-                    Approx 1 Week
+                    ~ 1 Week
                   </a>
                   <a
                     onClick={(e) => {
@@ -195,7 +195,7 @@ function App() {
                         : "")
                     }
                   >
-                    Approx 2 Weeks
+                    ~ 2 Weeks
                   </a>
                   <a
                     onClick={(e) => {
@@ -212,7 +212,7 @@ function App() {
                         : "")
                     }
                   >
-                    Approx 3 Weeks
+                    ~ 3 Weeks
                   </a>
                   <a
                     onClick={(e) => {
@@ -229,7 +229,7 @@ function App() {
                         : "")
                     }
                   >
-                    Approx 4 Weeks
+                    ~ 4 Weeks
                   </a>
                 </div>
               </div>
@@ -282,6 +282,9 @@ function App() {
                     </div>
                   </div>
                 </div>
+                <div class="gibson-card py-4">
+                  <div class="gibson-diamond"></div>
+                </div>
                 <div class="cmp cmp-timeline-content">
                   <div
                     class="cmp-timeline-content__year-wrapper"
@@ -331,6 +334,9 @@ function App() {
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="gibson-card py-4">
+                  <div class="gibson-diamond"></div>
                 </div>
                 <div class="cmp cmp-timeline-content">
                   <div
@@ -382,6 +388,9 @@ function App() {
                     </div>
                   </div>
                 </div>
+                <div class="gibson-card py-4">
+                  <div class="gibson-diamond"></div>
+                </div>
                 <div class="cmp cmp-timeline-content">
                   <div
                     class="cmp-timeline-content__year-wrapper"
@@ -431,6 +440,9 @@ function App() {
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="gibson-card py-4">
+                  <div class="gibson-diamond"></div>
                 </div>
                 <div class="cmp cmp-timeline-content">
                   <div
@@ -482,6 +494,9 @@ function App() {
                     </div>
                   </div>
                 </div>
+                <div class="gibson-card py-4">
+                  <div class="gibson-diamond"></div>
+                </div>
                 <div class="cmp cmp-timeline-content">
                   <div
                     class="cmp-timeline-content__year-wrapper"
@@ -531,6 +546,9 @@ function App() {
                       </div>
                     </div>
                   </div>
+                </div>
+                <div class="gibson-card py-4">
+                  <div class="gibson-diamond"></div>
                 </div>
                 <div class="cmp cmp-timeline-content">
                   <div

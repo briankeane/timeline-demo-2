@@ -2,7 +2,7 @@
 @import "../../scss/breakpoints.scss";
 
 .cmp-timeline-header {
-  background-color: #e03015;
+  background-color: #404040;
 
   .cmp-menu-item__label {
     display: inline-block;
@@ -38,7 +38,7 @@
       flex-direction: column;
       align-items: center;
       height: 100vh;
-      background-color: #e03015;
+      background-color: #484044;
       @include respond-to("small") {
         width: 100%;
       }
@@ -51,15 +51,15 @@
   h1 {
     color: #fff;
     text-align: center;
-    font-family: "Raleway", sans-serif;
+    font-family: "Trade Gothic LT Std", sans-serif;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 2em;
     letter-spacing: 0;
     line-height: 34px;
     width: 80%;
     margin-top: 0%;
     @include respond-to("medium-landscape") {
-      font-size: 70px;
+      font-size: 4.375em;
       letter-spacing: -1.75px;
       line-height: 70px;
       margin-top: 15%;
@@ -90,13 +90,13 @@
     }
     span {
       font-family: "Trade Gothic LT Std", sans-serif;
-      font-size: 18px;
+      font-size: 1.125em;
       font-weight: 300;
       line-height: 24px;
       letter-spacing: 0;
       text-align: center;
       @include respond-to("medium-landscape") {
-        font-size: 26px;
+        font-size: 1.625em;
         line-height: 24px;
         margin-right: 15px;
         font-weight: 300;
@@ -107,14 +107,12 @@
         width: 50%;
       }
       p {
-        font-family: "Raleway", sans-serif;
+        font-family: "Trade Gothic LT Std", sans-serif;
         letter-spacing: 0;
-        font-size: 14px;
+        font-size: 0.875em;
         line-height: 20px;
         text-align: center;
         @include respond-to("medium-landscape") {
-          font-size: 14px;
-          line-height: 20px;
           margin-bottom: auto;
           font-weight: normal;
           text-align: left;
@@ -208,7 +206,7 @@
       align-items: center;
       justify-content: center;
       padding-top: 25px;
-      background-color: #e03015;
+      background-color: #404040;
       @include respond-to("medium") {
         width: 50%;
       }
@@ -222,10 +220,10 @@
         width: max-content;
       }
       .cmp-timeline__follow-us-title {
-        font-family: "Raleway", sans-serif;
+        font-family: "Trade Gothic LT Std", sans-serif;
         letter-spacing: 0;
         color: #fff;
-        font-size: 12px;
+        font-size: 0.75em;
         font-weight: 800;
         letter-spacing: 0;
         line-height: 20px;
