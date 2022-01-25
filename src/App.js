@@ -239,7 +239,7 @@ function App() {
               </div>
 
               <div class="cmp-timeline__data-content-year">
-                <div class="gibson-card py-4">
+                <div class="gibson-card py-4 only-desktop">
                   <div class="gibson-diamond"></div>
                 </div>
                 <div class="cmp cmp-timeline-content">
