@@ -2,507 +2,512 @@
 @import "../../scss/breakpoints.scss";
 
 .cmp-timeline {
-  background-color: #404040;
-  scroll-behavior: smooth;
-  height: 100%;
-  .cmp-timeline__container {
-    height: 100vh;
-    position: relative;
-  }
+	background-color: #404040;
+	scroll-behavior: smooth;
+	height: 100%;
+	.cmp-timeline__container {
+		height: 100vh;
+		position: relative;
+	}
 
-  .cmp-timeline__data-nav-year {
-    box-sizing: border-box;
-  }
-  .cmp-timeline__content-wrapper {
-    background-color: #fff;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    @include respond-to("medium-landscape") {
-      position: absolute;
-      width: 70%;
-      right: 0;
-    }
-  }
+	.cmp-timeline__data-nav-year {
+		box-sizing: border-box;
+	}
+	.cmp-timeline__content-wrapper {
+		background-color: #fff;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@include respond-to("medium-landscape") {
+			position: absolute;
+			width: 70%;
+			right: 0;
+		}
+	}
 
-  .cmp-timeline__content-text-wrapper {
-    margin-top: 50%;
-    @include respond-to("medium") {
-      margin-top: 25%;
-    }
-    h1 {
-      color: #292828;
-      font-family: "Trade Gothic LT Std", sans-serif;
-      font-size: 42px;
-      font-weight: bold;
-      letter-spacing: -1.05px;
-      line-height: 48px;
-      margin: 15px 30px;
-      @include respond-to("large") {
-        font-size: 64px;
-        letter-spacing: -1.6px;
-        line-height: 60px;
-        margin: 25px 30px;
-        width: 80%;
-      }
-    }
-  }
+	.cmp-timeline__content-text-wrapper {
+		.cmp-timeline__content-text-wrapper {
+			margin-top: 400px;
+			@include respond-to("small") {
+				margin-top: 300px;
+				max-width: 375px;
+			}
+			@include respond-to("medium") {
+				margin-top: 25%;
+				max-width: none;
+			}
+			@media (min-width: 375px) and (min-height: 800px) and (max-height: 900px) {
+				margin-top: 170px;
+			}
+			h1 {
+				color: #000;
+				font-family: "Trade Gothic LT Std", sans-serif;
+				font-size: 42px;
+				font-weight: bold;
+				letter-spacing: -1.05px;
+				line-height: 48px;
+				margin: 15px 30px;
+				@include respond-to("large") {
+					font-size: 64px;
+					letter-spacing: -1.6px;
+					line-height: 60px;
+					margin: 25px 30px;
+					width: 80%;
+				}
+			}
+		}
+	}
 
-  .cmp-timeline__content-desc-desktop {
-    // display: none;
-    color: #000000;
-    font-family: "Trade Gothic LT Std", sans-serif;
-    font-size: 14px;
-    letter-spacing: 0;
-    line-height: 18px;
-    margin: 0px 30px 30px 30px;
-    p {
-      width: 80%;
-      @include respond-to("large") {
-        width: 50%;
-      }
-    }
-  }
+	.cmp-timeline__content-desc-desktop {
+		// display: none;
+		color: #000000;
+		font-family: "Trade Gothic LT Std", sans-serif;
+		font-size: 14px;
+		letter-spacing: 0;
+		line-height: 18px;
+		margin: 0px 30px 30px 30px;
+		p {
+			width: 80%;
+			@include respond-to("large") {
+				width: 50%;
+			}
+		}
+	}
 
-  .cmp-timeline__content-scroll-container {
-    color: #000000;
-    font-family: "Open Sans";
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 0;
-    line-height: 20px;
-    width: 100%;
-    @include respond-to("large") {
-      position: absolute;
-      bottom: 10%;
-      display: flex;
-    }
-    p {
-      margin: auto 30px;
-    }
-    span {
-      width: 50px;
-      height: 50px;
-      border-radius: 50%;
-      border: solid 1px #000;
-      position: relative;
-      display: block;
-      margin: 10px 30px;
-      @include respond-to("large") {
-        margin: 0px;
-      }
-      &:before {
-        content: "";
-        height: 24px;
-        width: 15px;
-        border-radius: 10px;
-        border: solid 2px #000;
-        background-color: transparent;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        @include respond-to("medium-max") {
-          content: "";
-          width: 2px;
-          height: 20px;
-          background-color: #000;
-          border: solid 2px #000;
-          border-width: 0 0 2px 2px;
-          position: absolute;
-          top: 50%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          -webkit-animation: arrow-line 0.8s ease-in-out infinite;
-          animation: arrow-line 0.8s ease-in-out infinite;
-        }
-      }
+	.cmp-timeline__content-scroll-container {
+		color: #000000;
+		font-family: "Open Sans";
+		font-size: 12px;
+		font-weight: 600;
+		letter-spacing: 0;
+		line-height: 20px;
+		width: 100%;
+		@include respond-to("large") {
+			position: absolute;
+			bottom: 10%;
+			display: flex;
+		}
+		p {
+			margin: auto 30px;
+		}
+		span {
+			width: 50px;
+			height: 50px;
+			border-radius: 50%;
+			border: solid 1px #000;
+			position: relative;
+			display: block;
+			margin: 10px 30px;
+			@include respond-to("large") {
+				margin: 0px;
+			}
+			&:before {
+				content: "";
+				height: 24px;
+				width: 15px;
+				border-radius: 10px;
+				border: solid 2px #000;
+				background-color: transparent;
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				@include respond-to("medium-max") {
+					content: "";
+					width: 2px;
+					height: 20px;
+					background-color: #000;
+					border: solid 2px #000;
+					border-width: 0 0 2px 2px;
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					-webkit-animation: arrow-line 0.8s ease-in-out infinite;
+					animation: arrow-line 0.8s ease-in-out infinite;
+				}
+			}
 
-      &:after {
-        content: "";
-        border: none;
-        border-width: 0;
-        width: 2px;
-        height: 5px;
-        background-color: #000;
-        top: 18px;
-        left: 50%;
-        bottom: initial;
-        padding: 0;
-        transform: translateX(-50%);
-        position: absolute;
-        @include respond-to("medium-max") {
-          content: "";
-          border: solid #000;
-          background-color: transparent;
-          border-width: 0 0 2px 2px;
-          position: absolute;
-          top: auto;
-          bottom: 16px;
-          left: 18px;
-          transform: rotate(-45deg);
-          padding: 5px;
-          -webkit-animation: arrow-triangle 0.8s ease-in-out infinite;
-          animation: arrow-triangle 0.8s ease-in-out infinite;
-        }
-      }
-    }
-  }
+			&:after {
+				content: "";
+				border: none;
+				border-width: 0;
+				width: 2px;
+				height: 5px;
+				background-color: #000;
+				top: 18px;
+				left: 50%;
+				bottom: initial;
+				padding: 0;
+				transform: translateX(-50%);
+				position: absolute;
+				@include respond-to("medium-max") {
+					content: "";
+					border: solid #000;
+					background-color: transparent;
+					border-width: 0 0 2px 2px;
+					position: absolute;
+					top: auto;
+					bottom: 16px;
+					left: 18px;
+					transform: rotate(-45deg);
+					padding: 5px;
+					-webkit-animation: arrow-triangle 0.8s ease-in-out infinite;
+					animation: arrow-triangle 0.8s ease-in-out infinite;
+				}
+			}
+		}
+	}
 
-  .cmp-timeline__img-wrapper {
-    display: none;
-    @include respond-to("medium-landscape") {
-      display: block;
-    }
-    img {
-      width: 40%;
-      right: 10%;
-      position: absolute;
-      @include respond-to("large") {
-        width: 20%;
-        bottom: 0;
-      }
-    }
-  }
+	.cmp-timeline__img-wrapper {
+		display: none;
+		@include respond-to("medium-landscape") {
+			display: block;
+		}
+		img {
+			width: 40%;
+			right: 10%;
+			position: absolute;
+			@include respond-to("large") {
+				width: 20%;
+				bottom: 0;
+			}
+		}
+	}
 
-  .cmp-timeline__content-rectangle {
-    height: 154px;
-    width: 350px;
-    background-color: #efefef;
-    position: absolute;
-    right: 0;
-    top: 60px;
-    @include respond-to("medium") {
-      width: 90%;
-      height: 30%;
-    }
-    @include respond-to("medium-landscape") {
-      width: 80%;
-      height: 25%;
-      right: 60px;
-    }
-    @include respond-to("large") {
-      width: 80%;
-      height: 30%;
-      right: 60px;
-      top: 0;
-    }
-  }
+	.cmp-timeline__content-rectangle {
+		height: 154px;
+		width: 350px;
+		background-color: #efefef;
+		position: absolute;
+		right: 0;
+		top: 60px;
+		@include respond-to("medium") {
+			width: 90%;
+			height: 30%;
+		}
+		@include respond-to("medium-landscape") {
+			width: 80%;
+			height: 25%;
+			right: 60px;
+		}
+		@include respond-to("large") {
+			width: 80%;
+			height: 30%;
+			right: 60px;
+			top: 0;
+		}
+	}
 
-  .cmp-timeline__content__images__thumbs-play-button {
-    width: 48px;
-    height: 48px;
-    display: block;
-    overflow: hidden;
-    position: relative;
-    margin: 0 auto;
-    border-radius: 100%;
-    z-index: 1;
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    cursor: pointer;
-    &::before {
-      content: "";
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 0;
-      height: 0;
-      border-top: 5px solid #fff;
-      border-bottom: 5px solid #fff;
-      border-left: 9px solid #000;
-      box-shadow: 0 0 0 9999px #fff;
-      z-index: -1;
-      border-top: 10px solid #fff;
-      border-bottom: 10px solid #fff;
-      border-left: 17px solid #000;
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-    }
-  }
+	.cmp-timeline__content__images__thumbs-play-button {
+		width: 48px;
+		height: 48px;
+		display: block;
+		overflow: hidden;
+		position: relative;
+		margin: 0 auto;
+		border-radius: 100%;
+		z-index: 1;
+		position: absolute;
+		bottom: 20px;
+		right: 20px;
+		cursor: pointer;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 0;
+			height: 0;
+			border-top: 5px solid #fff;
+			border-bottom: 5px solid #fff;
+			border-left: 9px solid #000;
+			box-shadow: 0 0 0 9999px #fff;
+			z-index: -1;
+			border-top: 10px solid #fff;
+			border-bottom: 10px solid #fff;
+			border-left: 17px solid #000;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
 
-  .cmp-timeline__lateral-wrapper {
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    position: fixed;
-    top: 0px;
-    background-color: #404040;
-    z-index: 20;
-    @include respond-to("medium-landscape") {
-      position: absolute;
-      left: 0;
-      height: 100vh;
-      width: 30%;
-      align-items: flex-start;
-      justify-content: center;
-    }
-    .cmp-timeline__lateral-text-wrapper {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      @include respond-to("medium-landscape") {
-        // margin: 10%;
-        position: fixed;
-        z-index: 1;
-        flex-direction: column;
-        align-items: flex-start;
-        width: max-content;
-        margin-left: 180px;
-      }
-      .cmp-timeline__lateral-back {
-        color: #fff;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        margin-left: 30px;
-        text-decoration: none;
-        @include respond-to("medium-landscape") {
-          margin-left: 0px;
-          margin: 25% 0%;
-        }
-        span {
-          margin: 0px 10px;
-          font-family: "Trade Gothic LT Std", sans-serif;
-          font-size: 16px;
-          font-weight: bold;
-          letter-spacing: -0.4px;
-          line-height: 19px;
-          display: inline-block;
-        }
-      }
-      .cmp-timeline__logo-wrapper {
-        margin-right: 30px;
-      }
-    }
-  }
+	.cmp-timeline__lateral-wrapper {
+		height: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		position: fixed;
+		top: 0px;
+		background-color: #404040;
+		z-index: 20;
+		@include respond-to("medium-landscape") {
+			position: absolute;
+			left: 0;
+			height: 100vh;
+			width: 30%;
+			align-items: flex-start;
+			justify-content: center;
+		}
+		.cmp-timeline__lateral-text-wrapper {
+			display: flex;
+			justify-content: space-between;
+			width: 100%;
+			@include respond-to("medium-landscape") {
+				// margin: 10%;
+				position: fixed;
+				z-index: 1;
+				flex-direction: column;
+				align-items: flex-start;
+				width: max-content;
+				margin-left: 180px;
+			}
+			.cmp-timeline__lateral-back {
+				color: #fff;
+				display: flex;
+				flex-direction: row;
+				align-items: center;
+				justify-content: center;
+				margin-left: 30px;
+				text-decoration: none;
+				@include respond-to("medium-landscape") {
+					margin-left: 0px;
+					margin: 25% 0%;
+				}
+				span {
+					margin: 0px 10px;
+					font-family: "Trade Gothic LT Std", sans-serif;
+					font-size: 16px;
+					font-weight: bold;
+					letter-spacing: -0.4px;
+					line-height: 19px;
+					display: inline-block;
+				}
+			}
+			.cmp-timeline__logo-wrapper {
+				margin-right: 30px;
+			}
+		}
+	}
 
-  .cmp-timeline__content-video-container,
-  .cmp-timeline__content-image-container,
-  .cmp-timeline__content-yt-video-container {
-    height: 166px;
-    width: 295px;
-    position: absolute;
-    right: 25px;
-    top: 85px;
-    @include respond-to("medium") {
-      width: 80%;
-      height: auto;
-    }
-    @include respond-to("medium-landscape") {
-      top: 100px;
-      width: 60%;
-    }
-    @include respond-to("large") {
-      top: 45px;
-      width: 65%;
-    }
-    video,
-    .cmp-timeline__content-image-elem {
-      max-width: 100%;
-    }
-    .cmp-timeline__content-yt-video-elem {
-      width: 100%;
-      height: 172px;
-      @include respond-to("medium") {
-        height: 333px;
-      }
-    }
-  }
+	.cmp-timeline__content-video-container,
+	.cmp-timeline__content-image-container,
+	.cmp-timeline__content-yt-video-container {
+		height: 166px;
+		width: 295px;
+		position: absolute;
+		right: 25px;
+		top: 85px;
+		@include respond-to("medium") {
+			width: 80%;
+			height: auto;
+		}
+		@include respond-to("medium-landscape") {
+			top: 100px;
+			width: 60%;
+		}
+		@include respond-to("large") {
+			top: 45px;
+			width: 65%;
+		}
+		video,
+		.cmp-timeline__content-image-elem {
+			max-width: 100%;
+		}
+		.cmp-timeline__content-yt-video-elem {
+			width: 100%;
+			height: 172px;
+			@include respond-to("medium") {
+				height: 333px;
+			}
+		}
+	}
 
-  .cmp-timeline__data {
-    // display: none;
-    position: relative;
-    overflow: hidden;
+	.cmp-timeline__data {
+		// display: none;
+		position: relative;
+		overflow: hidden;
 
-    .cmp-timeline__data-nav-year {
-      float: left;
-      width: 100%;
-      @include respond-to("medium-landscape") {
-        // position: absolute;
-        // left: 0;
-        height: 100vh;
-        width: 30%;
-      }
+		.cmp-timeline__data-nav-year {
+			float: left;
+			width: 100%;
+			@include respond-to("medium-landscape") {
+				// position: absolute;
+				// left: 0;
+				height: 100vh;
+				width: 30%;
+			}
 
-      a {
-        display: block;
-        min-width: 45px;
-        min-height: 24px;
-        margin-bottom: 30px;
-        margin-top: 80px;
-        @include respond-to("medium-landscape") {
-          margin-top: 50px;
-        }
-      }
-    }
-    .cmp-timeline__data-content-year {
-      float: left;
-      background-color: #fff;
-      height: 100%;
+			a {
+				display: block;
+				min-width: 45px;
+				min-height: 24px;
+				margin-bottom: 30px;
+				margin-top: 80px;
+				@include respond-to("medium-landscape") {
+					margin-top: 50px;
+				}
+			}
+		}
+		.cmp-timeline__data-content-year {
+			float: left;
+			background-color: #fff;
+			height: 100%;
 
-      @include respond-to("medium-landscape") {
-        // position: absolute;
-        width: 70%;
-        // right: 0;
-      }
-    }
-  }
+			@include respond-to("medium-landscape") {
+				// position: absolute;
+				width: 70%;
+				// right: 0;
+			}
 
-  .cmp-timeline__data-nav-year {
-    height: auto;
-    @include respond-to("medium") {
-      text-align: end;
-      padding: 0 50px 0px 50px;
-    }
-    a {
-      margin: 50px 15px;
-      color: #ffffff;
-      font-family: "Trade Gothic LT Std", sans-serif;
-      font-size: 18px;
-      font-weight: 300;
-      letter-spacing: -0.5px;
-      line-height: 24px;
-    }
-    a:hover,
-    a.active {
-      font-weight: bold;
-      font-size: 20px;
-    }
-  }
+			&.nav-fixed {
+				.cmp-timeline-content__year-wrapper {
+					padding-top: 20px;
+					@include respond-to("medium-landscape") {
+						padding-top: 0;
+					}
+				}
+			}
+		}
+	}
 
-  .cmp-timeline__data-nav-year--container {
-    display: flex;
-    top: 140px;
-    margin-left: 38px;
-    padding-top: 10px;
-    position: relative;
-    @include respond-to("medium") {
-      display: block;
-      top: 140px;
-      margin-left: 130px;
-      padding-top: 10px;
-      position: static;
-    }
-    @include respond-to("medium-max") {
-      display: flex;
-      top: 0;
-      margin-left: 0;
-      padding-top: 0;
-      position: relative;
-      overflow-y: hidden;
-    }
-    @include respond-to("large") {
-      margin-left: 30px;
-    }
-    &:after {
-      @include respond-to("medium") {
-        content: "";
-        height: 60px;
-        width: 150px;
-        background-image: linear-gradient(180deg, transparent, #404040);
-        position: absolute;
-        bottom: -30px;
-        left: -60px;
-      }
-    }
-    &.fixed {
-      position: fixed;
-      background-color: #404040;
-      z-index: 10;
-      top: 45px;
-      width: 100%;
-      @include respond-to("medium") {
-        left: 0;
-        padding: 0 50px 0px 50px;
-      }
-      @include respond-to("medium-landscape") {
-        top: 140px;
-        width: 150px;
-        padding: 0px 0px 0px 15px;
-      }
-      @include respond-to("large") {
-        left: 80px;
-        min-width: 200px;
-        margin-top: 50px;
-      }
-    }
-    a {
-      position: relative;
-      &:before {
-        content: "";
-        background-image: url("https://images.ctfassets.net/m8onsx4mm13s/4P1r90aHcLVxhROsbVznxX/78ea474de8a083d60879b3ac7afa8ca3/timeline-years-bkg-black.png");
-        position: absolute;
-        height: 76px;
-        width: 70px;
-        left: -80px;
-        top: 5px;
-        background-size: cover;
-        @include respond-to("medium-max") {
-          transform: rotate(90deg);
-          left: -40px;
-          top: -80px;
-        }
-      }
+	.cmp-timeline__data-nav-year {
+		height: auto;
+		@include respond-to("medium") {
+			text-align: end;
+			padding: 0 50px 0px 50px;
+		}
+		a {
+			margin: 50px 15px;
+			color: #ffffff;
+			font-family: "Trade Gothic LT Std", sans-serif;
+			font-size: 18px;
+			font-weight: 300;
+			letter-spacing: -0.5px;
+			line-height: 24px;
+		}
+		a:hover,
+		a.active {
+			font-weight: bold;
+			font-size: 20px;
+		}
+	}
 
-      &:after {
-        content: "";
-        background-image: url("https://images.ctfassets.net/m8onsx4mm13s/7txWjLRuWtu9IZYezJ5JNS/e48acf895021a84ebd5330a564cc9dda/timeline-years-active-bkg-black.png");
-        position: absolute;
-        width: 74px;
-        height: 59px;
-        left: -77px;
-        background-repeat: no-repeat;
-        top: -15px;
-        background-size: cover;
-        opacity: 0;
-        transition: opacity 0.5s;
+	.cmp-timeline__data-nav-year--container {
+		display: flex;
+		top: 140px;
+		padding-top: 10px;
+		position: relative;
+		@include respond-to("medium") {
+			display: block;
+			top: 140px;
+			padding-top: 10px;
+			position: static;
+		}
+		@media (max-width: 1023px) {
+			display: flex;
+			top: 0;
+			margin-left: 0;
+			padding-top: 0;
+			position: relative;
+			overflow-x: auto;
+			overflow-y: hidden;
+		}
+		&:after {
+			@include respond-to("medium") {
+				content: "";
+				height: 60px;
+				width: 150px;
+				background-image: linear-gradient(180deg, transparent, #404040);
+				position: absolute;
+				bottom: -30px;
+				left: -60px;
+			}
+		}
+		&.fixed {
+			position: fixed;
+			background-color: #404040;
+			z-index: 10;
+			top: 60px;
+			width: 100%;
+			left: 0;
+			@include respond-to("medium-landscape") {
+				left: initial;
+				top: 140px;
+				width: auto;
+        margin-left: 10%;
+			}
+		}
+		a {
+			position: relative;
+			&:before {
+				content: "";
+				background-image: url("https://images.ctfassets.net/m8onsx4mm13s/4P1r90aHcLVxhROsbVznxX/78ea474de8a083d60879b3ac7afa8ca3/timeline-years-bkg-black.png");
+				position: absolute;
+				height: 76px;
+				width: 70px;
+				left: -80px;
+				top: 5px;
+				background-size: cover;
+				@media (max-width: 1023px) {
+					transform: rotate(90deg);
+					left: -40px;
+					top: -80px;
+				}
+			}
+			&:after {
+				content: "";
+				background-image: url("https://images.ctfassets.net/m8onsx4mm13s/7txWjLRuWtu9IZYezJ5JNS/e48acf895021a84ebd5330a564cc9dda/timeline-years-active-bkg-black.png");
+				position: absolute;
+				width: 74px;
+				height: 59px;
+				left: -77px;
+				background-repeat: no-repeat;
+				top: -15px;
+				background-size: cover;
+				opacity: 0;
+				transition: opacity 0.5s;
+				@media (max-width: 1023px) {
+					transform: rotate(90deg);
+					left: -13px;
+					top: -66px;
+					z-index: 1;
+				}
+			}
+			&:hover,
+			&.active {
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+	}
 
-        @include respond-to("medium-max") {
-          transform: rotate(90deg);
-          left: -13px;
-          top: -66px;
-          z-index: 1;
-        }
-      }
-
-      &:hover,
-      &.active {
-        &:after {
-          opacity: 1;
-        }
-      }
-    }
-  }
-
-  .cmp-timeline__data-content-year {
-    position: relative;
-    h1 {
-      color: #000;
-      font-family: "Trade Gothic LT Std", sans-serif;
-      font-size: 18px;
-      font-weight: bold;
-      letter-spacing: -0.55px;
-      line-height: 22px;
-      @include respond-to("medium") {
-        font-size: 22px;
-        line-height: 26px;
-        padding: 25px;
-        margin: 0px 25px;
-      }
-    }
-  }
+	.cmp-timeline__data-content-year {
+		position: relative;
+		h1 {
+			color: #000;
+			font-family: "Trade Gothic LT Std", sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+			letter-spacing: -0.55px;
+			line-height: 22px;
+			@include respond-to("medium") {
+				font-size: 22px;
+				line-height: 26px;
+				padding: 25px;
+				margin: 0px 25px;
+			}
+		}
+	}
 }
