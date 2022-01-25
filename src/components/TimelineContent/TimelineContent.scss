@@ -9,7 +9,6 @@
   }
 
   .cmp-timeline-content__year-wrapper {
-    border-bottom: 1px solid rgba(121, 121, 121, 0.18);
     margin: 0px 20px 10px 20px;
     @include respond-to("medium") {
       margin: 20px;

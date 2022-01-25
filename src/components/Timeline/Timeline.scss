@@ -2,8 +2,7 @@
 @import "../../scss/breakpoints.scss";
 
 .cmp-timeline {
-  background-color: #e03015;
-  overflow-y: scroll;
+  background-color: #404040;
   scroll-behavior: smooth;
   height: 100%;
   .cmp-timeline__container {
@@ -34,8 +33,8 @@
       margin-top: 25%;
     }
     h1 {
-      color: #e03015;
-      font-family: "Raleway", sans-serif;
+      color: #292828;
+      font-family: "Trade Gothic LT Std", sans-serif;
       font-size: 42px;
       font-weight: bold;
       letter-spacing: -1.05px;
@@ -240,7 +239,7 @@
     width: 100%;
     position: fixed;
     top: 0px;
-    background-color: #e03015;
+    background-color: #404040;
     z-index: 20;
     @include respond-to("medium-landscape") {
       position: absolute;
@@ -370,11 +369,10 @@
       padding: 0 50px 0px 50px;
     }
     a {
-      height: 25px;
       margin: 50px 15px;
       color: #ffffff;
       font-family: "Trade Gothic LT Std", sans-serif;
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 300;
       letter-spacing: -0.5px;
       line-height: 24px;
@@ -382,7 +380,7 @@
     a:hover,
     a.active {
       font-weight: bold;
-      font-size: 26px;
+      font-size: 20px;
     }
   }
 
@@ -405,7 +403,6 @@
       margin-left: 0;
       padding-top: 0;
       position: relative;
-      overflow-x: scroll;
       overflow-y: hidden;
     }
     @include respond-to("large") {
@@ -416,7 +413,7 @@
         content: "";
         height: 60px;
         width: 150px;
-        background-image: linear-gradient(180deg, transparent, #df3014);
+        background-image: linear-gradient(180deg, transparent, #404040);
         position: absolute;
         bottom: -30px;
         left: -60px;
@@ -424,7 +421,7 @@
     }
     &.fixed {
       position: fixed;
-      background-color: #df3016;
+      background-color: #404040;
       z-index: 10;
       top: 45px;
       width: 100%;
@@ -434,18 +431,20 @@
       }
       @include respond-to("medium-landscape") {
         top: 140px;
-        width: auto;
+        width: 150px;
         padding: 0px 0px 0px 15px;
       }
       @include respond-to("large") {
         left: 80px;
+        min-width: 200px;
+        margin-top: 50px;
       }
     }
     a {
       position: relative;
       &:before {
         content: "";
-        background-image: url("https://images.ctfassets.net/m8onsx4mm13s/5o0MshBqEgHfOz7X4YICs9/9ce369e065d166bbcb936a7539482abd/timeline-years-bkg.png");
+        background-image: url("https://images.ctfassets.net/m8onsx4mm13s/4P1r90aHcLVxhROsbVznxX/78ea474de8a083d60879b3ac7afa8ca3/timeline-years-bkg-black.png");
         position: absolute;
         height: 76px;
         width: 70px;
@@ -461,7 +460,7 @@
 
       &:after {
         content: "";
-        background-image: url("https://images.ctfassets.net/m8onsx4mm13s/6TEpLqaCnLP6De7Wj0ayBU/8651dc3cc3571fbdc6dec7d1471d5c9e/timeline-years-active-bkg.png");
+        background-image: url("https://images.ctfassets.net/m8onsx4mm13s/7txWjLRuWtu9IZYezJ5JNS/e48acf895021a84ebd5330a564cc9dda/timeline-years-active-bkg-black.png");
         position: absolute;
         width: 74px;
         height: 59px;

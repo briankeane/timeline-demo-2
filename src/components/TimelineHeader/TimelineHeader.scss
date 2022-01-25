@@ -2,7 +2,7 @@
 @import "../../scss/breakpoints.scss";
 
 .cmp-timeline-header {
-  background-color: #e03015;
+  background-color: #404040;
 
   .cmp-menu-item__label {
     display: inline-block;
@@ -38,7 +38,7 @@
       flex-direction: column;
       align-items: center;
       height: 100vh;
-      background-color: #e03015;
+      background-color: #484044;
       @include respond-to("small") {
         width: 100%;
       }
@@ -208,7 +208,7 @@
       align-items: center;
       justify-content: center;
       padding-top: 25px;
-      background-color: #e03015;
+      background-color: #404040;
       @include respond-to("medium") {
         width: 50%;
       }
