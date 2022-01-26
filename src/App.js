@@ -93,7 +93,7 @@ function App() {
                     <img
                       class="cmp-timeline__logo"
                       alt="Gibson Logo"
-                      src="//images.ctfassets.net/m8onsx4mm13s/72p8qgeqA4UK7FD2MwyA19/cbc4a71ff92b788b791a53fa683dc6f4/gibson__1_.svg"
+                      src="images/gibson-logo-white.svg"
                     />
                   </div>
                 </div>
@@ -107,6 +107,7 @@ function App() {
                       src="images/guitar-background.png"
                       width={"100%"}
                       style={{ maxHeight: "250px" }}
+                      alt="Guitar Background"
                     />
                     <h1 class="centered-text">Your Guitar</h1>
                   </div>
@@ -277,17 +278,16 @@ function App() {
                               Finally, we've bookmatched the maple top and glue
                               it to the mahogany body.
                             </p>
-                            <p>
-                              <iframe
-                                width="100%"
-                                height="600"
-                                src="https://www.youtube.com/embed/npOOEWaTadA?start=15"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                              ></iframe>
-                            </p>
+                            <iframe
+                              width="60%"
+                              height="300"
+                              style={{ marginLeft: "20%" }}
+                              src="https://www.youtube.com/embed/npOOEWaTadA?start=15"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
                           </div>
                         </div>
                       </div>
@@ -330,17 +330,16 @@ function App() {
                               special machine, and now the neck will be sent to
                               the finishing factory for it's final touches.
                             </p>
-                            <p>
-                              <iframe
-                                width="100%"
-                                height="600"
-                                src="https://www.youtube.com/embed/npOOEWaTadA?start=15"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                              ></iframe>
-                            </p>
+                            <iframe
+                              width="60%"
+                              height="300"
+                              style={{ marginLeft: "20%" }}
+                              src="https://www.youtube.com/embed/npOOEWaTadA?start=15"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
                           </div>
                         </div>
                       </div>
@@ -383,17 +382,16 @@ function App() {
                               sand has been applied to the body with a special
                               belt sander.
                             </p>
-                            <p>
-                              <iframe
-                                width="100%"
-                                height="600"
-                                src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                              ></iframe>
-                            </p>
+                            <iframe
+                              width="60%"
+                              height="300"
+                              style={{ marginLeft: "20%" }}
+                              src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
                           </div>
                         </div>
                       </div>
@@ -436,17 +434,16 @@ function App() {
                               sand has been applied to the body with a special
                               belt sander.
                             </p>
-                            <p>
-                              <iframe
-                                width="100%"
-                                height="600"
-                                src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                              ></iframe>
-                            </p>
+                            <iframe
+                              width="60%"
+                              height="300"
+                              style={{ marginLeft: "20%" }}
+                              src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
                           </div>
                         </div>
                       </div>
@@ -489,17 +486,16 @@ function App() {
                               sand has been applied to the body with a special
                               belt sander.
                             </p>
-                            <p>
-                              <iframe
-                                width="100%"
-                                height="600"
-                                src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                              ></iframe>
-                            </p>
+                            <iframe
+                              width="60%"
+                              height="300"
+                              style={{ marginLeft: "20%" }}
+                              src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
                           </div>
                         </div>
                       </div>
@@ -542,17 +538,16 @@ function App() {
                               sand has been applied to the body with a special
                               belt sander.
                             </p>
-                            <p>
-                              <iframe
-                                width="100%"
-                                height="600"
-                                src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                              ></iframe>
-                            </p>
+                            <iframe
+                              width="60%"
+                              height="300"
+                              style={{ marginLeft: "20%" }}
+                              src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
                           </div>
                         </div>
                       </div>
@@ -595,17 +590,16 @@ function App() {
                               sand has been applied to the body with a special
                               belt sander.
                             </p>
-                            <p>
-                              <iframe
-                                width="100%"
-                                height="600"
-                                src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
-                                title="YouTube video player"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen
-                              ></iframe>
-                            </p>
+                            <iframe
+                              width="60%"
+                              height="300"
+                              style={{ marginLeft: "20%" }}
+                              src="https://www.youtube.com/embed/d05le5SY2X8?start=87"
+                              title="YouTube video player"
+                              frameborder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                              allowfullscreen
+                            ></iframe>
                           </div>
                         </div>
                       </div>

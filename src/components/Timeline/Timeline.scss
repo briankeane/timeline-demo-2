@@ -389,6 +389,9 @@
 	.cmp-timeline__data-nav-year {
 		height: auto;
 		@include respond-to("medium") {
+			.fixed {
+				text-align: start;
+			}
 			text-align: end;
 			padding: 0 50px 0px 50px;
 		}
