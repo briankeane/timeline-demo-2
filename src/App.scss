@@ -1,5 +1,11 @@
 .App {
-	text-align: center;
+	h1,
+	h2,
+	h3 {
+		text-align: center;
+	}
+
+	font-family: "Trade Gothic LT Std", sans-serif;
 }
 
 .App-logo {
@@ -37,13 +43,17 @@
 	}
 }
 
+.header-background-image {
+	filter: brightness(0.6);
+}
+
 .gibson-card {
 	position: relative;
 	text-align: center;
 	padding-bottom: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1110px;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1110px;
 }
 .gibson-card:after {
 	position: absolute;
@@ -77,5 +87,35 @@
 	.gibson-card .gibson-diamond {
 		width: 16px;
 		height: 48px;
+	}
+}
+
+.centered-text-top {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 1em;
+	@media (min-width: 768px) {
+		font-size: 1.5em;
+	}
+	@media (min-width: 1024px) {
+		font-size: 1.625em;
+	}
+	@media (min-width: 1200px) {
+		font-size: 2em;
+	}
+}
+
+.img-container {
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+.only-desktop {
+	display: none;
+	@media (min-width: 1024px) {
+		display: block;
 	}
 }
