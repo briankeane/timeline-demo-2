@@ -84,7 +84,7 @@ const Specs = () => {
 							<div>Includes Gibson Accessory Kit</div>
 						</div>
 					</div>
-					<div id="disclaimer" class="spec-section">
+					{/* <div id="disclaimer" class="spec-section">
 						<p>
 							<small>
 								<i>
@@ -95,7 +95,7 @@ const Specs = () => {
 								</i>
 							</small>
 						</p>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

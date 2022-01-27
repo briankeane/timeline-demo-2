@@ -1,4 +1,5 @@
 import { useRef, useEffect, useState } from "react";
+import useWindowSize from "./hooks/useWindowSize";
 import "./App.scss";
 import "./components/Timeline/Timeline.scss";
 import "./components/TimelineContent/TimelineContent.scss";
@@ -30,6 +31,7 @@ function App() {
   const twoWeeksAgoContentRef = useRef(null);
 
   const [timelineState, setTimelineState] = useState();
+  const size = useWindowSize();
 
   const determineAndSetTimelineState = () => {
     let headFixedHeight = lateralTextWrapperRef.current.offsetHeight;
@@ -61,7 +63,8 @@ function App() {
   };
 
   const onScroll = () => {
-    determineAndSetTimelineState();
+    if (size.width < 1023)
+      determineAndSetTimelineState();
     determineAndSetActiveComponent();
   };
 
@@ -70,6 +73,14 @@ function App() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  useEffect(() => {
+    if (size.width > 1023) {
+      setTimelineState(TimelineState.FIXED);
+    } else {
+      setTimelineState(TimelineState.FLOATING);
+    }
+  }, [size])
 
   return (
     <div className="App">
@@ -109,7 +120,7 @@ function App() {
                       style={{ maxHeight: "250px" }}
                       alt="Guitar Background"
                     />
-                    <h1 class="centered-text">Your Guitar</h1>
+                    <h1 class="centered-text-top">Welcome Matt! Here's a little about the progress of your guitar, 'The Shred Machine' 🤘</h1>
                   </div>
 
                   <div class="cmp-timeline__content-desc-desktop"></div>

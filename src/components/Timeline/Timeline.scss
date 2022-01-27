@@ -4,16 +4,9 @@
 .cmp-timeline {
 	background-color: #404040;
 	scroll-behavior: smooth;
-	height: 100%;
 
 	.cmp-timeline__container {
 		position: relative;
-		@media (max-width: 1023px) {
-			height: 150vh;
-		}
-		@include respond-to("medium-landscape") {
-			height: 150vh;
-		}
 	}
 
 	.cmp-timeline__data-nav-year {
@@ -26,7 +19,7 @@
 		align-items: center;
 		justify-content: center;
 		@include respond-to("medium-landscape") {
-			position: absolute;
+			margin-left: 30%;
 			width: 70%;
 			right: 0;
 		}
@@ -48,7 +41,6 @@
 			}
 			h1 {
 				color: #000;
-				font-family: "Trade Gothic LT Std", sans-serif;
 				font-size: 2.625em;
 				font-weight: bold;
 				letter-spacing: -1.05px;
@@ -68,7 +60,6 @@
 	.cmp-timeline__content-desc-desktop {
 		// display: none;
 		color: #000000;
-		font-family: "Trade Gothic LT Std", sans-serif;
 		font-size: 0.875em;
 		letter-spacing: 0;
 		line-height: 18px;
@@ -291,7 +282,6 @@
 				}
 				span {
 					margin: 0px 10px;
-					font-family: "Trade Gothic LT Std", sans-serif;
 					font-size: 1em;
 					font-weight: bold;
 					letter-spacing: -0.4px;
@@ -398,7 +388,6 @@
 		a {
 			margin: 50px 15px;
 			color: #ffffff;
-			font-family: "Trade Gothic LT Std", sans-serif;
 			font-size: 0.75em;
 			font-weight: 300;
 			letter-spacing: -0.5px;
@@ -423,6 +412,7 @@
 		padding-top: 10px;
 		position: relative;
 		@include respond-to("medium") {
+			z-index: 20;
 			display: block;
 			top: 140px;
 			padding-top: 10px;
@@ -452,7 +442,6 @@
 		&.fixed {
 			position: fixed;
 			background-color: #404040;
-			z-index: 10;
 			top: 60px;
 			width: 100%;
 			left: 0;
@@ -512,7 +501,6 @@
 		position: relative;
 		h1 {
 			color: #000;
-			font-family: "Trade Gothic LT Std", sans-serif;
 			font-size: 1.125em;
 			font-weight: bold;
 			letter-spacing: -0.55px;
